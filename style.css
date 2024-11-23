@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #000000;
+}
+/* General hover effect for all text */
+h1, h2, h3, p, a {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add border effect on hover */
+h1:hover, h2:hover, h3:hover, p:hover, a:hover {
+    color: #FF5722; /* Custom highlight color */
+    transform: scale(1.05); /* Slight zoom effect */
+    border: 2px solid #FF5722; /* Highlighted border */
+    border-radius: 5px; /* Rounded corners for border */
+    padding: 5px; /* Space between text and border */
+}
+.stylized-image {
+    width: 300px; /* Width of the image */
+    height: 300px; /* Height of the image */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth effect on hover */
+}
+
+.stylized-image:hover {
+    
+    transform: scale(1.3); /* Slightly enlarge the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow depth on hover */
+}
+
+
+/* Custom underline effect for links */
+a:hover {
+    text-decoration: none;
+    background: linear-gradient(90deg, #FFEB3B, #FFC107);
+    color: #333; /* Dark text color for contrast */
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* Shadow effect for hovered sections */
+.section:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Typing effect customization */
+#tagline {
+    border-bottom: 2px solid #924abe;
+    padding-bottom: 5px;
+    font-weight: bold;
+    transition: border-color 0.3s ease;
+}
+
+#tagline:hover {
+    border-color: #FF5722; /* Change border color on hover */
+}
+
+
+header {
+    background: linear-gradient(90deg, #4CAF50, #dd9d4e);
+    color: rgb(52, 93, 169);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFC107;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Section backgrounds */
+#about {
+    background: #FFEBEE;
+}
+
+#education {
+    background: #E3F2FD;
+}
+
+#projects {
+    background: #E8F5E9;
+}
+
+#skills {
+    background: #FFFDE7;
+}
+
+#contact {
+    background: #EDE7F6;
+}
+
+.section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects, .skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background: #FAFAFA;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #F5F5F5;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #2E7D32;
+}
+
+.project a {
+    color: #1E88E5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #1565C0;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFC107;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Rounded button links */
+nav ul li a, .social-links a {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:hover, .social-links a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+.circular-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.circular-buttons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #4CAF50, #2E7D32);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #43A047, #1B5E20);
+}
